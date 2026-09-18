@@ -1,0 +1,417 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A B V J Refrigeration & Air Conditioning | Franklin, Louisiana</title>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14181c; --mut:#57616c; --line:#e2e6ec; --bg:#f8fafb; --panel:#fff;
+  --deep:#12283f; --deep2:#1d3b58; --acc:#2f6fbf; --acc2:#7fb4e3; --ok:#1f7a45;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Bitter,Georgia,serif;font-weight:700;line-height:1.16;letter-spacing:-.014em;text-wrap:balance}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.demobar{background:#0d1117;color:#e6edf3;font-size:12.5px;text-align:center;padding:8px 14px}
+.demobar b{color:#f0b13c}
+.urg{background:#8a1c1c;color:#fff;text-align:center;font-size:13.5px;padding:9px;font-weight:500}
+.urg a{color:#fff}
+nav{position:sticky;top:0;z-index:60;background:rgba(248,250,251,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.navin{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 0}
+.logo{font-family:Bitter,serif;font-weight:700;font-size:19px}
+.logo span{color:var(--acc)}
+.navl{display:flex;gap:20px;font-size:14.5px;font-weight:500}
+.navl a{color:var(--mut);text-decoration:none}.navl a:hover{color:var(--deep2)}
+.navl a.on{color:var(--deep2);font-weight:700}
+.call{display:inline-flex;align-items:center;gap:8px;background:var(--deep2);color:#fff;text-decoration:none;font-weight:600;font-size:14.5px;padding:10px 17px;border-radius:8px;white-space:nowrap}
+@media(max-width:900px){.navl{display:none}}
+.hero{position:relative;background:linear-gradient(155deg,var(--deep),var(--deep2));color:#eef3f8;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;opacity:.13;
+  background:repeating-linear-gradient(78deg,transparent 0 38px,rgba(255,255,255,.55) 38px 40px),
+             repeating-linear-gradient(-12deg,transparent 0 38px,rgba(255,255,255,.3) 38px 39px)}
+.heroin{position:relative;z-index:2;display:grid;grid-template-columns:1.06fr .94fr;gap:42px;align-items:center;padding:56px 0 62px}
+@media(max-width:980px){.heroin{grid-template-columns:1fr;gap:28px;padding:38px 0 44px}}
+.eyeb{display:inline-block;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--acc2);border:1px solid rgba(255,255,255,.28);padding:5px 12px;border-radius:999px;margin-bottom:17px}
+.hero h1{font-size:clamp(31px,5vw,48px);margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--acc2)}
+.hero .lede{font-size:17px;color:#c6d3df;max-width:520px}
+.ticks{list-style:none;margin-top:20px;display:grid;gap:9px}
+.ticks li{display:flex;gap:10px;font-size:15.5px;color:#dde6ee}
+.ticks svg{flex:0 0 18px;margin-top:4px;fill:var(--acc2)}
+.form{background:var(--panel);border-radius:14px;padding:24px;box-shadow:0 20px 54px rgba(0,0,0,.3);color:var(--ink)}
+.form h3{font-size:20px;margin-bottom:4px}
+.form .fs{font-size:13.5px;color:var(--mut);margin-bottom:14px}
+label{display:block;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--mut);margin:12px 0 5px}
+select,input{width:100%;font-family:inherit;font-size:15px;color:var(--ink);background:#fbfcfd;border:1px solid var(--line);border-radius:8px;padding:11px 12px}
+select:focus,input:focus{outline:2px solid var(--acc);outline-offset:1px;border-color:transparent}
+.chk{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.chk label{display:inline-flex;align-items:center;gap:7px;margin:0;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:#fbfcfd;font-size:13.5px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--ink);cursor:pointer}
+.chk input{width:auto;padding:0;margin:0}
+.btn{width:100%;margin-top:18px;background:var(--acc);color:#fff;border:0;border-radius:9px;padding:14px;font-family:Bitter,serif;font-size:16px;font-weight:700;cursor:pointer}
+.btn:hover{filter:brightness(.88)}
+.hint{font-size:12px;color:var(--mut);margin-top:10px;text-align:center}
+.out{display:none;margin-top:15px;border-radius:10px;padding:15px 16px;font-size:14.5px;border:1px solid}
+.out.show{display:block}
+.out b{display:block;font-family:Bitter,serif;font-size:16.5px;margin-bottom:5px}
+.o-hi{background:#eef6f0;border-color:#bedcc6;color:#1d5734}
+.o-md{background:#fdf6ea;border-color:#ecdcb2;color:#775413}
+.o-lo{background:#f3f5f7;border-color:#dde2e7;color:#48515a}
+.o-urg{background:#fdeeee;border-color:#f0c6c4;color:#8a1c1c}
+.trust{background:#0e141a;color:#b6c2cd;padding:15px 0}
+.trustin{display:flex;flex-wrap:wrap;justify-content:center;gap:11px 34px;font-size:13.5px}
+.trustin b{color:var(--acc2);font-weight:700}
+section{padding:58px 0}
+.sh{text-align:center;max-width:680px;margin:0 auto 34px}
+.sh .kick{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);font-weight:700;margin-bottom:10px}
+.sh h2{font-size:clamp(25px,3.4vw,33px);margin-bottom:11px}
+.sh p{color:var(--mut);font-size:16.5px}
+.band{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:17px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:13px;overflow:hidden}
+.ctop{height:100px;position:relative;background:linear-gradient(140deg,var(--deep),var(--deep2))}
+.ctop::after{content:"";position:absolute;inset:0;opacity:.24;background:repeating-linear-gradient(78deg,transparent 0 15px,rgba(255,255,255,.5) 15px 16px)}
+.cbody{padding:17px}.cbody h3{font-size:18px;margin-bottom:6px}
+.cbody p{font-size:14.5px;color:var(--mut)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:820px){.two{grid-template-columns:1fr}}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:24px}
+.box.pri{background:linear-gradient(160deg,var(--deep),var(--deep2));color:#eef3f8;border-color:var(--deep2)}
+.box h3{font-size:20px;margin-bottom:10px}
+.box ul{margin:0 0 0 19px;font-size:15px;color:var(--mut)}
+.box.pri ul{color:#c6d3df}
+.box li{margin-bottom:8px}
+.tagp{display:inline-block;font-size:11px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;background:var(--acc2);color:#0e1a26;padding:4px 10px;border-radius:999px;margin-bottom:12px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:16px}
+.fact{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
+.fact .k{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);font-weight:700;margin-bottom:7px}
+.fact .v{font-family:Bitter,serif;font-size:22px;font-weight:700;color:var(--deep2)}
+.fact .n{font-size:13.5px;color:var(--mut);margin-top:5px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:22px;counter-reset:s}
+.step{counter-increment:s;position:relative;padding-left:50px}
+.step::before{content:counter(s);position:absolute;left:0;top:0;width:37px;height:37px;border-radius:50%;background:var(--deep2);color:#fff;font-family:Bitter,serif;font-weight:700;font-size:17px;display:grid;place-items:center}
+.step h3{font-size:17.5px;margin-bottom:5px}.step p{font-size:14.5px;color:var(--mut)}
+.revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:17px}
+.rev{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:20px}
+.stars{color:#e0a32e;font-size:15.5px;letter-spacing:2px}
+.rev p{font-size:14.8px;color:var(--mut);margin:9px 0 12px;font-style:italic}
+.rev .who{font-size:13.5px;font-weight:700}
+.rev .who span{display:block;font-weight:400;color:var(--mut);font-size:12.5px;margin-top:2px}
+.ratebar{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:28px;flex-wrap:wrap}
+.ratebig{font-family:Bitter,serif;font-size:42px;font-weight:700;color:var(--deep2)}
+.ratetxt{font-size:14.5px;color:var(--mut);text-align:left}
+.badges{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.bdg{background:var(--panel);border:1px dashed #b9c3d1;border-radius:11px;padding:14px 20px;text-align:center;min-width:140px}
+.bdg b{display:block;font-family:Bitter,serif;font-size:16px;color:var(--deep2)}
+.bdg span{font-size:11.5px;color:var(--mut);letter-spacing:.05em;text-transform:uppercase}
+.areas{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-top:20px}
+.areas span{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:8px 15px;font-size:14px;color:var(--mut)}
+.cta2{background:linear-gradient(155deg,var(--deep),var(--deep2));color:#eef3f8;text-align:center;padding:58px 0}
+.cta2 h2{font-size:clamp(25px,3.4vw,33px);margin-bottom:11px}
+.cta2 p{color:#c6d3df;font-size:16.5px;max-width:560px;margin:0 auto 22px}
+.cta2 .call{font-size:16px;padding:14px 26px;background:var(--acc2);color:#0e1a26}
+footer{background:#0b1016;color:#87929d;font-size:13.5px;padding:32px 0}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
+footer h4{color:#e7edf3;font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;margin-bottom:10px}
+footer a{color:#87929d;text-decoration:none;display:block;margin-bottom:6px}
+footer a:hover{color:var(--acc2)}
+.fnote{border-top:1px solid #1b232c;padding-top:18px;margin-top:20px;font-size:12.5px;color:#6b7681;line-height:1.65}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+</style>
+<style>
+:root{--deep:#07131c;--deep2:#0d5c73;--acc:#3fc1d9}
+.hero{background:radial-gradient(1200px 600px at 78% 18%,rgba(63,193,217,.22),transparent 62%),linear-gradient(150deg,#07131c 0%,#0b2b3a 52%,#0d5c73 100%)}
+.hero::after{opacity:.05}
+.urg{display:inline-flex;align-items:center;gap:9px;background:rgba(255,92,74,.16);border:1px solid rgba(255,92,74,.45);color:#ffb3a8;border-radius:999px;padding:8px 15px;font-size:13.5px;font-weight:700;margin-bottom:18px}
+.urg i{width:8px;height:8px;border-radius:50%;background:#ff5c4a;display:inline-block;animation:bp 1.6s infinite}
+@keyframes bp{0%,100%{opacity:1}50%{opacity:.25}}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:13px}
+.gal div{aspect-ratio:4/3;border-radius:12px;border:1px dashed var(--acc);display:flex;align-items:center;justify-content:center;text-align:center;padding:14px;font-size:13.5px;color:var(--mut);background:var(--panel)}
+.fillme{background:rgba(63,193,217,.10);border:1px dashed var(--acc);border-radius:10px;padding:13px 16px;margin:14px 0;font-size:14.5px;color:var(--ink)}
+.fillme b{color:var(--acc)}
+.faqs{max-width:820px;margin:0 auto}
+.faq{background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden}
+.faq summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:600;font-size:16px;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;color:var(--acc);font-weight:400;line-height:1}
+.faq[open] summary::after{content:"\2212"}
+.faq p{padding:0 18px 16px;color:var(--mut);font-size:15px;margin:0}
+.cta2{background:linear-gradient(150deg,#07131c 0%,#0b2b3a 55%,#0d5c73 100%)}
+.bigcall{display:flex;align-items:center;justify-content:center;gap:12px;background:var(--acc);color:#03212a;border-radius:12px;padding:17px;font-weight:800;font-size:21px;text-decoration:none;margin-top:8px;letter-spacing:.2px}
+.bigcall:hover{filter:brightness(1.07)}
+.callbar{display:none}
+@media(max-width:860px){
+ .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:90;background:var(--acc);color:#03212a;align-items:center;justify-content:center;gap:10px;padding:14px;font-weight:800;font-size:17px;text-decoration:none;box-shadow:0 -4px 18px rgba(0,0,0,.35)}
+ body{padding-bottom:58px}
+}
+</style>
+
+<div class="demobar">This is a <b>concept website</b> built by AG1 Consulting for A B V J Refrigeration &amp; Air Conditioning LLC. It is not the live site, no form on it sends anywhere, and everything marked in blue is a placeholder awaiting the company's own details.</div>
+
+<nav>
+  <div class="wrap navin">
+    <div class="logo">A B V J <span>Refrigeration &amp; Air</span></div>
+    <div class="navl">
+      <a href="#services" class="on">Services</a>
+      <a href="#areas">Areas</a>
+      <a href="#work">Our Work</a>
+      <a href="#faq">FAQs</a>
+    </div>
+    <a class="call" href="tel:3373465750">&#9742; (337) 346-5750</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap heroin">
+    <div>
+      <div class="urg"><i></i> AC out right now? Call &mdash; do not fill in a form</div>
+      <h1>AC out in Franklin? <em>We are local, we answer, and we can usually be there today.</em></h1>
+      <p class="lede">A B V J Refrigeration &amp; Air Conditioning has served South Louisiana since 2021. Family-owned,
+      based on Hwy 182 in Franklin. Residential and commercial air conditioning, heating and refrigeration &mdash; repairs,
+      installs and duct work.</p>
+      <ul class="ticks">
+        <li><svg viewBox="0 0 20 20" width="18" height="18"><path d="M7.6 14.2 3.4 10l1.4-1.4 2.8 2.8 7.6-7.6L16.6 5z"/></svg><span>Local to Franklin &mdash; not driving in from another parish</span></li>
+        <li><svg viewBox="0 0 20 20" width="18" height="18"><path d="M7.6 14.2 3.4 10l1.4-1.4 2.8 2.8 7.6-7.6L16.6 5z"/></svg><span>Residential and commercial, repairs through to full installs</span></li>
+        <li><svg viewBox="0 0 20 20" width="18" height="18"><path d="M7.6 14.2 3.4 10l1.4-1.4 2.8 2.8 7.6-7.6L16.6 5z"/></svg><span>Family-owned and trading since 2021</span></li>
+        <li><svg viewBox="0 0 20 20" width="18" height="18"><path d="M7.6 14.2 3.4 10l1.4-1.4 2.8 2.8 7.6-7.6L16.6 5z"/></svg><span>Straight quotes, explained before we start</span></li>
+      </ul>
+      <a class="bigcall" href="tel:3373465750">&#9742; Call (337) 346-5750</a>
+    </div>
+
+    <form class="form" id="book" onsubmit="return route(event)">
+      <h3>Not an emergency? Tell us the job</h3>
+      <div class="fs">Five questions. We call you back with a time.</div>
+
+      <label for="prop">Is this a home or a business?</label>
+      <select id="prop">
+        <option value="">Choose one&hellip;</option>
+        <option value="h">My home</option>
+        <option value="c">My business &mdash; commercial AC</option>
+        <option value="c">My business &mdash; refrigeration / cold storage</option>
+        <option value="l">A rental property I own</option>
+      </select>
+
+      <label for="issue">What is happening?</label>
+      <select id="issue">
+        <option value="">Choose one&hellip;</option>
+        <option value="x">No cooling at all</option>
+        <option value="x">No heat at all</option>
+        <option value="w">Running but not cooling properly</option>
+        <option value="w">Strange noise, smell or leaking water</option>
+        <option value="n">I want a quote for a new system</option>
+        <option value="n">Duct work or a maintenance check</option>
+      </select>
+
+      <label for="when">How soon do you need somebody?</label>
+      <select id="when">
+        <option value="">Choose one&hellip;</option>
+        <option value="u">Today if possible</option>
+        <option value="s">In the next day or two</option>
+        <option value="p">This week is fine</option>
+        <option value="p">Just pricing it up for now</option>
+      </select>
+
+      <label for="town">Which town?</label>
+      <select id="town">
+        <option value="">Choose one&hellip;</option>
+        <option>Franklin</option>
+        <option>Morgan City</option>
+        <option>Patterson</option>
+        <option>Berwick</option>
+        <option>Baldwin / Charenton</option>
+        <option>New Iberia</option>
+        <option>Somewhere else in South Louisiana</option>
+      </select>
+
+      <label for="ph">Name and phone number</label>
+      <input id="ph" placeholder="Name &middot; (337) 000-0000">
+
+      <button class="btn" type="submit">Request a call back</button>
+      <div class="hint">If your AC is out completely, call instead &mdash; it is faster.</div>
+      <div class="out" id="out"></div>
+    </form>
+  </div>
+</header>
+
+<div class="trust">
+  <div class="wrap trustin">
+    <div><b>Since 2021</b></div>
+    <div><b>Family</b> owned</div>
+    <div><b>Franklin</b>, LA</div>
+    <div><b>Home</b> &amp; <b>business</b></div>
+    <div><b>Free</b> quotes</div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sh">
+      <div class="kick">Services</div>
+      <h2>What we do</h2>
+      <p>Six things, each one written out properly instead of a heading on its own.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="ctop">A/C repair</div>
+        <div class="cbody"><p>Not cooling, tripping the breaker, freezing up or blowing warm. We diagnose it, tell you
+        what it is and what it costs before we touch it.</p></div>
+      </div>
+      <div class="card">
+        <div class="ctop">Heater repair</div>
+        <div class="cbody"><p>Furnaces and heat strips that will not fire, short-cycle or smell wrong. Worth testing
+        before the first cold snap rather than during it.</p></div>
+      </div>
+      <div class="card">
+        <div class="ctop">System installation</div>
+        <div class="cbody"><p>Full change-outs, sized properly for the house rather than sold by the ton. We explain what
+        each option costs to run, not just to buy.</p></div>
+      </div>
+      <div class="card">
+        <div class="ctop">Heat pump repair</div>
+        <div class="cbody"><p>Heat pumps that will not switch over, ice up in winter or run constantly. Common in this
+        part of Louisiana and worth getting right.</p></div>
+      </div>
+      <div class="card">
+        <div class="ctop">Fan motor replacement</div>
+        <div class="cbody"><p>Blower and condenser fan motors, capacitors and contactors &mdash; the parts that fail most
+        often and are usually the cheapest fix on the list.</p></div>
+      </div>
+      <div class="card">
+        <div class="ctop">Duct cleaning &amp; repair</div>
+        <div class="cbody"><p>Leaking, crushed or disconnected duct work makes a good system behave like a bad one.
+        Often the reason one room never cools.</p></div>
+      </div>
+    </div>
+    <div class="fillme">
+      <b>&#9888; Note for Aaron, not for customers:</b> these six descriptions are ours, written to replace the six
+      "I'm a paragraph" placeholders currently live on your services page. <b>Read them and change anything that is not
+      how you actually work</b> &mdash; they should sound like you, not like us. Also worth adding here: your call-out or
+      diagnostic charge, whether you offer financing on change-outs, and whether you cover after hours.
+    </div>
+  </div>
+</section>
+
+<section class="band" id="areas">
+  <div class="wrap">
+    <div class="sh">
+      <div class="kick">Service area</div>
+      <h2>Where we work</h2>
+      <p>Based on Hwy 182 in Franklin, covering St. Mary Parish and the surrounding area.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Franklin</h3><p>Our home town.</p></div>
+      <div class="step"><h3>Patterson &amp; Berwick</h3><p>A short run up the highway.</p></div>
+      <div class="step"><h3>Morgan City</h3><p>Residential and commercial.</p></div>
+      <div class="step"><h3>Baldwin, Charenton &amp; New Iberia</h3><p>Covered on request.</p></div>
+    </div>
+    <div class="fillme">
+      <b>&#9888; Note for Aaron:</b> these towns are our suggestion based on your Franklin address, not your confirmed
+      coverage. <b>Tell us which ones are right and which to remove.</b> Naming towns matters &mdash; your current site
+      says only "South Louisiana", which is the one thing somebody in Patterson will not search for.
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sh">
+      <div class="kick">Our work</div>
+      <h2>Recent jobs</h2>
+    </div>
+    <div class="gal">
+      <div>Your photo of a finished install</div>
+      <div>Your photo of a commercial unit</div>
+      <div>Your photo of the crew or the truck</div>
+      <div>Your photo of duct work done properly</div>
+    </div>
+    <div class="fillme">
+      <b>&#9888; Note for Aaron:</b> every one of these is a placeholder, on purpose. <b>We found no photographs of your
+      own work anywhere on your current site</b> &mdash; the images on it come from the template's stock library. Four
+      phone photos of your own jobs would do more for this page than anything else on it, and they cost nothing.
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="sh">
+      <div class="kick">What happens</div>
+      <h2>Four steps</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Call or send the form</h3><p>Five questions, or just ring if it is urgent.</p></div>
+      <div class="step"><h3>We call you back</h3><p>With a time, not a runaround.</p></div>
+      <div class="step"><h3>We diagnose and price it</h3><p>You hear the cost before we start the work.</p></div>
+      <div class="step"><h3>We fix it</h3><p>And tell you honestly if it is worth repairing or replacing.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sh">
+      <div class="kick">Straight answers</div>
+      <h2>What people ask before they call</h2>
+    </div>
+    <div class="faqs">
+      <details class="faq"><summary>Can you come out today?</summary><p>Often, yes. Call rather than use the form if it is urgent.</p></details>
+      <details class="faq"><summary>Do you charge to come and look?</summary><p><i>(Concept note: A B V J to confirm the diagnostic or call-out charge here.)</i></p></details>
+      <details class="faq"><summary>Do you do commercial as well as houses?</summary><p>Yes &mdash; commercial air conditioning and refrigeration as well as residential.</p></details>
+      <details class="faq"><summary>Should I repair it or replace it?</summary><p>We will tell you honestly which makes more sense, including when the repair is the better buy.</p></details>
+      <details class="faq"><summary>How far do you travel?</summary><p>St. Mary Parish and the surrounding area from our base in Franklin.</p></details>
+      <details class="faq"><summary>Can I spread the cost of a new system?</summary><p><i>(Concept note: A B V J to confirm whether financing is offered.)</i></p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta2">
+  <div class="wrap">
+    <h2>AC out? Call us. It is faster than any form.</h2>
+    <p>A B V J Refrigeration &amp; Air Conditioning &mdash; Franklin, Louisiana.</p>
+    <a class="call" href="tel:3373465750">&#9742; (337) 346-5750</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><h4>A B V J Refrigeration</h4><a href="tel:3373465750">(337) 346-5750</a><a href="mailto:info@abvjrefrigeration.com">info@abvjrefrigeration.com</a><a href="#top">7231 Hwy 182, Franklin, LA 70538</a></div>
+      <div><h4>Services</h4><a href="#services">A/C repair</a><a href="#services">System installation</a><a href="#services">Duct work</a></div>
+      <div><h4>Areas</h4><a href="#areas">Franklin</a><a href="#areas">Morgan City</a><a href="#areas">Patterson &amp; Berwick</a></div>
+      <div><h4>Company</h4><a href="#work">Our work</a><a href="#faq">FAQs</a><a href="#book">Request a call back</a></div>
+    </div>
+    <div class="fnote">
+      <b>Concept demonstration &mdash; not a live website.</b> This page was produced by AG1 Consulting to show A B V J
+      Refrigeration &amp; Air Conditioning LLC what its website could look like. <b>No form on this page submits anywhere
+      and nobody will be contacted.</b> The company name, the Franklin address, the telephone number, the email address,
+      the 2021 founding date, the description of the business as local and family-owned and the six services listed are
+      taken from the business's own published website and remain its property. <b>All other wording &mdash; the service
+      descriptions, the towns listed, the five questions, the four steps and every FAQ answer &mdash; is illustrative copy
+      written by AG1 and has not been confirmed with the business.</b> <b>No response time, availability, after-hours or
+      same-day cover, call-out charge, price, financing option, warranty, guarantee, licence, registration, insurance or
+      qualification is stated, promised or implied anywhere on this page</b>, and the statements about being able to
+      attend today are illustrative wording for the business to confirm or remove, not a commitment. The highlighted notes
+      are addressed to the business rather than to visitors. <b>No customer review, rating, testimonial or photograph of
+      any completed work appears on this page, and none has been invented</b>; the gallery tiles are empty placeholders.
+      Nothing here is a quotation or an offer. Company, platform and template names are used for identification only and
+      belong to their respective owners.
+    </div>
+  </div>
+</footer>
+
+<script>
+function route(e){
+  e.preventDefault();
+  var p=document.getElementById('prop').value, i=document.getElementById('issue').value,
+      w=document.getElementById('when').value, o=document.getElementById('out'), r;
+  if(!p||!i||!w){ r=['o-lo','Nearly there','Answer all five so we can get you the right person.']; }
+  else if(i==='x'||w==='u'){ r=['o-hi','This one is urgent','Please call (337) 346-5750 now &mdash; a form is slower than a phone.']; }
+  else if(p==='c'){ r=['o-hi','Commercial &mdash; straight to Aaron','We will call you back to arrange a time.']; }
+  else if(w==='p'){ r=['o-md','Pricing it up &mdash; understood','We will call with a quote and a time that suits you.']; }
+  else { r=['o-md','Thanks &mdash; we have what we need','We will ring you back shortly with a time.']; }
+  o.className='out show '+r[0];
+  o.innerHTML='<b>'+r[1]+'</b>'+r[2]+'<span style="display:block;margin-top:8px;opacity:.85">Demonstration only &mdash; this is how an enquiry would be sorted before it reaches anyone.</span>';
+  o.scrollIntoView({behavior:'smooth',block:'nearest'});
+  return false;
+}
+</script>
+
+<a class="callbar" href="tel:3373465750">&#9742; Call (337) 346-5750</a>
